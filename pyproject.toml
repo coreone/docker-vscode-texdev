@@ -3,7 +3,7 @@ name = "docker-vscode-texdev"
 version = "0.2.1"
 description = "Docker container for use with VS Code"
 license = "BSD-3-Clause"
-authors = ["Andrew Teixeira <teixeira@broadinstitute.org>"]
+authors = ["coreone <>"]
 readme = "README.md"
 repository = "https://github.com/coreone/docker-vscode-texdev"
 homepage = "https://github.com/coreone/docker-devnull-texdev"
@@ -15,7 +15,7 @@ python = "^3.7"  # Compatible python versions must be declared here
 # Python specific dependencies with prereleases allowed
 black = { version = "^19.0", allow-prereleases = true }
 # 4.0.1 breaks for some reason
-python-slugify = "<= 4.0.0"
+python-slugify = "*"
 # Git dependencies
 scaraplate = "> 0.2"
 toml = ">= 0.9"

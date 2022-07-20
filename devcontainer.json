@@ -1,0 +1,46 @@
+{
+    "name": "TexDev",
+    "image": "vscode-texdev:latest",
+    "settings": {
+        "files.associations": {
+            "*.eyaml": "yaml",
+            "Puppetfile": "ruby"
+        },
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.linting.pylamaEnabled": true,
+        "python.linting.pylamaPath": "pylama",
+        "python.pythonPath": "/usr/local/bin/python",
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "mounts": [
+        "source=${localWorkspaceFolder}/.vscode-server-insiders,target=/root/.vscode-server-insiders,type=bind,consistency=cached"
+    ],
+    "extensions": [
+        "batisteo.vscode-django",
+        "bierner.markdown-preview-github-styles",
+        "bungcip.better-toml",
+        "coenraads.bracket-pair-colorizer",
+        "compulim.indent4to2",
+        "craigmaslowski.erb",
+        "davidanson.vscode-markdownlint",
+        "deerawan.vscode-whitespacer",
+        "editorconfig.editorconfig",
+        "hashicorp.terraform",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "njpwerner.autodocstring",
+        "puppet.puppet-vscode",
+        "rebornix.Ruby",
+        "riccardonovaglia.missinglineendoffile",
+        "sandcastle.whitespace",
+        "timonwong.shellcheck",
+        "wholroyd.jinja",
+        "wwm.better-align"
+    ],
+    "runArgs": [
+        "--rm",
+        "--name",
+        "vscode_texdev"
+    ]
+}

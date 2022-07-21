@@ -10,7 +10,6 @@
         "python.linting.enabled": true,
         "python.linting.pylamaEnabled": true,
         "python.linting.pylamaPath": "pylama",
-        "python.pythonPath": "/usr/local/bin/python",
         "terminal.integrated.shell.linux": "/bin/bash"
     },
     "mounts": [

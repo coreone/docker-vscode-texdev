@@ -26,8 +26,9 @@ RUN apt-get update \
     && curl -o /tmp/puppetlabs.deb https://apt.puppet.com/puppet7-release-bullseye.deb \
     && dpkg -i /tmp/puppetlabs.deb \
     && apt-get update \
+    && apt-get install -yq puppet-agent pdk \
     && pip install -U pip poetry \
-    && gem install bundler pdk puppet rake --no-doc \
+    && gem install bundler rake --no-doc \
     && bundle config --global silence_root_warning 1 \
     && rm -f /etc/localtime \
     && ln -s /usr/share/zoneinfo/America/New_York /etc/localtime \

@@ -21,7 +21,6 @@ scaraplate = "> 0.2"
 toml = ">= 0.9"
 
 bump2version = "*"
-codecov = "*"
 cookiecutter = "*"
 coverage = "*"
 fixtures = "*"

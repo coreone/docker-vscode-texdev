@@ -35,7 +35,16 @@
         "python.linting.enabled": true,
         "python.linting.pylamaEnabled": true,
         "python.linting.pylamaPath": "pylama",
-        "terminal.integrated.shell.linux": "/bin/bash"
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "terraform.languageServer.ignoreDirectoryNames": [
+          ".devcontainer"
+        ],
+        "terraform.languageServer.indexing.ignoreDirectoryNames": [
+          ".devcontainer",
+          ".vscode",
+          ".vscode-server-insiders"
+        ]
       }
     }
   },

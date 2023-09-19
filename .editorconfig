@@ -16,7 +16,7 @@ insert_final_newline = false
 [*.{diff,patch}]
 trim_trailing_whitespace = false
 
-[*.{json,yaml,yml}]
+[*.{json,yaml,yml,yamllint}]
 indent_size = 2
 indent_style = space
 

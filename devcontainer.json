@@ -4,7 +4,6 @@
       "extensions": [
         "batisteo.vscode-django",
         "bierner.markdown-preview-github-styles",
-        "bungcip.better-toml",
         "chouzz.vscode-better-align",
         "compulim.indent4to2",
         "craigmaslowski.erb",
@@ -24,6 +23,7 @@
         "riccardonovaglia.missinglineendoffile",
         "sandcastle.whitespace",
         "timonwong.shellcheck",
+        "tamasfe.even-better-toml",
         "wholroyd.jinja"
       ],
       "settings": {

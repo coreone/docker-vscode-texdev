@@ -3,7 +3,7 @@ FROM koalaman/shellcheck:latest as shellcheck
 
 FROM hashicorp/terraform:latest as terraform
 
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 # This Dockerfile adds a non-root 'vscode' user with sudo access. However, for Linux,
 # this user's GID/UID must match your local user UID/GID to avoid permission issues

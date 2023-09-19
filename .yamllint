@@ -1,8 +1,8 @@
 ---
 extends: default
 rules:
+  indentation:
+    spaces: 2
   line-length:
     level: warning
     max: 120
-  indentation:
-    spaces: 2

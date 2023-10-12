@@ -17,12 +17,13 @@
         "hashicorp.terraform",
         "laurenttreguier.rpm-spec",
         "ms-azuretools.vscode-docker",
+        "ms-python.black-formatter",
         "ms-python.python",
         "njpwerner.autodocstring",
         "puppet.puppet-vscode",
-        "rebornix.Ruby",
         "riccardonovaglia.missinglineendoffile",
         "sandcastle.whitespace",
+        "shopify.ruby-lsp",
         "timonwong.shellcheck",
         "tamasfe.even-better-toml",
         "wholroyd.jinja"
@@ -32,11 +33,6 @@
           "*.eyaml": "yaml",
           "Puppetfile": "ruby"
         },
-        "python.formatting.provider": "black",
-        "python.linting.enabled": true,
-        "python.linting.pylamaEnabled": true,
-        "python.linting.pylamaPath": "pylama",
-        "terminal.integrated.shell.linux": "/bin/bash",
         "terminal.integrated.shell.linux": "/bin/bash",
         "terraform.languageServer.ignoreDirectoryNames": [
           ".devcontainer"

@@ -13,6 +13,7 @@
         "eamodio.gitlens",
         "editorconfig.editorconfig",
         "esbenp.prettier-vscode",
+        "gitHub.vscode-github-actions",
         "hashicorp.hcl",
         "hashicorp.terraform",
         "laurenttreguier.rpm-spec",

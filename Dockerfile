@@ -1,9 +1,9 @@
 # Pull the shellcheck image so we can fetch out the shellcheck binary
-FROM koalaman/shellcheck:latest as shellcheck
+FROM docker.io/koalaman/shellcheck:latest as shellcheck
 
-FROM hashicorp/terraform:latest as terraform
+FROM docker.io/hashicorp/terraform:latest as terraform
 
-FROM python:3.11-slim
+FROM docker.io/library/python:3.11-slim
 
 # This Dockerfile adds a non-root 'vscode' user with sudo access. However, for Linux,
 # this user's GID/UID must match your local user UID/GID to avoid permission issues

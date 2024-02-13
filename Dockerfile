@@ -41,7 +41,7 @@ RUN apt-get update \
     && chown -R ${USERNAME}:${USERNAME} /home/vscode/.[a-z]* \
     && cd /tmp \
     && poetry config virtualenvs.create false \
-    && poetry install --no-ansi -v \
+    && poetry install --no-ansi -v --no-root \
     && chmod 755 /bin/shellcheck \
     && rm -rf /root/.cache \
     && rm -rf /tmp/* \

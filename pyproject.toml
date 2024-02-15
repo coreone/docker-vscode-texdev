@@ -10,31 +10,25 @@ homepage = "https://github.com/coreone/docker-devnull-texdev"
 keywords = ["docker", "vscode", "python", "ruby", "puppet", "terraform"]
 
 [tool.poetry.dependencies]
-python = "^3.7"  # Compatible python versions must be declared here
+python = "^3.9"  # Compatible python versions must be declared here
 
 # Python specific dependencies with prereleases allowed
 black = { version = "^19.0", allow-prereleases = true }
-# 4.0.1 breaks for some reason
-python-slugify = "*"
-# Git dependencies
-scaraplate = "> 0.2"
-toml = ">= 0.9"
+cookiecutter = "^2.2.3"
+python-slugify = "^8.0.1"
+scaraplate = "^0.4"
+toml = "^0.10"
 
-bump2version = "*"
-cookiecutter = "*"
-coverage = "*"
-fixtures = "*"
-green = "*"
-mock = "*"
-pydocstyle = "*"
-pylama = "*"
-pylint = "*"
-pyyaml = "*"
-setuptools = "*"
-testtools = "*"
-twine = "*"
-unittest2 = "*"
-wheel = "*"
-yamllint = "*"
-
-#[tool.poetry.dev-dependencies]
+[tool.poetry.dev-dependencies]
+bump2version = "^1.0.1"
+coverage = "^7.2.7"
+green = "^3.4.3"
+mock = "^5.1.0"
+pydocstyle = "^6.3.0"
+pylama = "^8.4.1"
+pylint = "^2.13.9"
+pyyaml = "^6.0.1"
+testtools = "^2.6.0"
+twine = "^4.0.2"
+wheel = "^0.40.0"
+yamllint = "^1.32.0"

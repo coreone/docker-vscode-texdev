@@ -1,0 +1,12 @@
+---
+version: 2
+updates:
+  - package-ecosystem: 'pip'
+    directory: '/'
+    groups:
+      pip:
+        patterns:
+          - '*'
+    schedule:
+      # Check for updates to GitHub Actions every week
+      interval: 'weekly'

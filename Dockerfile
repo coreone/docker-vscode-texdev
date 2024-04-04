@@ -23,12 +23,12 @@ RUN apt-get update \
     && apt-get install --no-install-recommends -yq bind9utils curl dialog g++ gcc git \
         gnupg iproute2 libssl-dev libxml2-dev libffi-dev libxslt1-dev locales-all \
         lsb-release make openssh-client procps ruby ruby-dev sudo \
-    && curl -o /tmp/puppetlabs.deb https://apt.puppet.com/puppet7-release-bullseye.deb \
+    && curl -o /tmp/puppetlabs.deb https://apt.puppet.com/puppet7-release-bookworm.deb \
     && dpkg -i /tmp/puppetlabs.deb \
     && apt-get update \
-    && apt-get install -yq puppet-agent pdk \
+    && apt-get install -yq puppet-agent \
     && pip install -U pip poetry \
-    && gem install bundler rake --no-doc \
+    && gem install bundler pdk rake --no-doc \
     && bundle config --global silence_root_warning 1 \
     && rm -f /etc/localtime \
     && ln -s /usr/share/zoneinfo/America/New_York /etc/localtime \

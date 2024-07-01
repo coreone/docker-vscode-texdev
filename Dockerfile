@@ -3,6 +3,8 @@ FROM docker.io/koalaman/shellcheck:latest as shellcheck
 
 FROM docker.io/hashicorp/terraform:latest as terraform
 
+FROM ghcr.io/astral-sh/ruff:latest as ruff
+
 FROM docker.io/library/python:3.11-slim
 
 # This Dockerfile adds a non-root 'vscode' user with sudo access. However, for Linux,
@@ -17,6 +19,7 @@ COPY analytics.yml pyproject.toml poetry.lock README.md /tmp/
 
 COPY --from=shellcheck /bin/shellcheck /bin/shellcheck
 COPY --from=terraform /bin/terraform /bin/terraform
+COPY --from=ruff /ruff /bin/ruff
 
 RUN apt-get update \
     && apt-get upgrade -y \

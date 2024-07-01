@@ -11,7 +11,7 @@ declare -ga SUDO
 declare -ga TRACK_FILES
 declare -ga TTY
 
-CONTAINER_IMAGE='vscode-texdev:dev'
+CONTAINER_IMAGE='vscode-texdev:latest'
 DOCKER_SOCKET='/var/run/docker.sock'
 LABEL_PREFIX='org.broadinstitute.vscode-texdev'
 SCRIPT_DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

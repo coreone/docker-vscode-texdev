@@ -13,7 +13,7 @@ keywords = ["docker", "vscode", "python", "ruby", "puppet", "terraform"]
 python = "^3.9"  # Compatible python versions must be declared here
 
 # Python specific dependencies with prereleases allowed
-black = { version = "^24.2", allow-prereleases = true }
+black = { version = "^24.8", allow-prereleases = true }
 cookiecutter = "^2.2.3"
 python-slugify = "^8.0.1"
 scaraplate = "^0.5"
@@ -21,10 +21,10 @@ toml = "^0.10"
 
 [tool.poetry.dev-dependencies]
 bump2version = "^1.0.1"
-coverage = "^7.2.7"
+coverage = "^7.6.1"
 green = "^4.0.0"
 mock = "^5.1.0"
-pylint = "^3.0.3"
-pyyaml = "^6.0.1"
+pylint = "^3.2.7"
+pyyaml = "^6.0.2"
 testtools = "^2.6.0"
 yamllint = "^1.32.0"

@@ -5,7 +5,7 @@ FROM docker.io/hashicorp/terraform:latest as terraform
 
 FROM ghcr.io/astral-sh/ruff:latest as ruff
 
-FROM docker.io/library/python:3.11-slim
+FROM docker.io/library/python:3.11-slim-bookworm
 
 # This Dockerfile adds a non-root 'vscode' user with sudo access. However, for Linux,
 # this user's GID/UID must match your local user UID/GID to avoid permission issues

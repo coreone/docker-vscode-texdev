@@ -4,6 +4,7 @@
       "extensions": [
         "batisteo.vscode-django",
         "bierner.markdown-preview-github-styles",
+        "charliermarsh.ruff",
         "chouzz.vscode-better-align",
         "compulim.indent4to2",
         "craigmaslowski.erb",
@@ -21,7 +22,6 @@
         "ms-python.black-formatter",
         "ms-python.python",
         "njpwerner.autodocstring",
-        "pascalreitermann93.vscode-yaml-sort",
         "puppet.puppet-vscode",
         "riccardonovaglia.missinglineendoffile",
         "sandcastle.whitespace",
@@ -34,6 +34,14 @@
         "files.associations": {
           "*.eyaml": "yaml",
           "Puppetfile": "ruby"
+        },
+        "files.watcherExclude": {
+          "**/.git/objects/**": true,
+          "**/.git/subtree-cache/**": true,
+          "**/node_modules/*/**": true,
+          "**/.hg/store/**": true,
+          "**/.terragrunt-cache/**": true,
+          "**/tmp/**": true
         },
         "terminal.integrated.shell.linux": "/bin/bash",
         "terraform.languageServer.ignoreDirectoryNames": [

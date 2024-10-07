@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "docker-vscode-texdev"
 version = "0.2.1"
-description = "Docker container for use with VS Code"
+description = "Container image for use with VS Code devcontainer"
 license = "BSD-3-Clause"
 authors = ["coreone <ateixeira@gmail.com>"]
 readme = "README.md"

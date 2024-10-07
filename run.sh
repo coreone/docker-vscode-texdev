@@ -15,7 +15,7 @@ CONTAINER_IMAGE='vscode-texdev:latest'
 DOCKER_SOCKET='/var/run/docker.sock'
 LABEL_PREFIX='org.broadinstitute.vscode-texdev'
 SCRIPT_DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-TRACK_FILES=( Dockerfile poetry.lock pyproject.toml )
+TRACK_FILES=( Containerfile poetry.lock pyproject.toml )
 
 if hash sha256sum 2>/dev/null; then
     CHKSUM_APP='sha256sum'

@@ -3,9 +3,7 @@ FROM docker.io/koalaman/shellcheck:latest as shellcheck
 
 FROM docker.io/hashicorp/terraform:latest as terraform
 
-FROM ghcr.io/astral-sh/ruff:latest as ruff
-
-FROM docker.io/library/python:3.11-slim-bookworm
+FROM docker.io/library/python:3.12-slim-bookworm
 
 # This Dockerfile adds a non-root 'vscode' user with sudo access. However, for Linux,
 # this user's GID/UID must match your local user UID/GID to avoid permission issues
@@ -14,12 +12,13 @@ FROM docker.io/library/python:3.11-slim-bookworm
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
+ARG LOCAL_BIN=/root/.local/bin
+ENV PATH=$LOCAL_BIN:$PATH
 
 COPY analytics.yml pyproject.toml poetry.lock README.md /tmp/
 
 COPY --from=shellcheck /bin/shellcheck /bin/shellcheck
 COPY --from=terraform /bin/terraform /bin/terraform
-COPY --from=ruff /ruff /bin/ruff
 
 RUN apt-get update \
     && apt-get upgrade -y \
@@ -30,7 +29,8 @@ RUN apt-get update \
     && dpkg -i /tmp/puppetlabs.deb \
     && apt-get update \
     && apt-get install -yq puppet-agent \
-    && pip install -U pip poetry \
+    && pip install -U pip \
+    && curl -sSL https://install.python-poetry.org | python3 - \
     && gem install bundler pdk rake --no-doc \
     && bundle config --global silence_root_warning 1 \
     && rm -f /etc/localtime \

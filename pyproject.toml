@@ -1,30 +1,41 @@
-[tool.poetry]
-name = "docker-vscode-texdev"
-version = "0.2.1"
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+authors = [
+    { name = "coreone", email = "<ateixeira@gmail.com>"}
+]
 description = "Container image for use with VS Code devcontainer"
-license = "BSD-3-Clause"
-authors = ["coreone <ateixeira@gmail.com>"]
-readme = "README.md"
-repository = "https://github.com/coreone/docker-vscode-texdev"
-homepage = "https://github.com/coreone/docker-devnull-texdev"
+dynamic = [ "dependencies" ]
 keywords = ["docker", "vscode", "python", "ruby", "puppet", "terraform"]
+license = "BSD-3-Clause"
+name = "docker-vscode-texdev"
+readme = "README.md"
+requires-python = ">=3.11,<4.0.0"
+version = "0.2.1"
+
+[project.urls]
+homepage = "https://github.com/coreone/docker-devnull-texdev"
+repository = "https://github.com/coreone/docker-vscode-texdev"
+
+[tool.poetry]
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.9"  # Compatible python versions must be declared here
+python = "^3.11"  # Compatible python versions must be declared here
 
 # Python specific dependencies with prereleases allowed
-black = { version = "^24.8", allow-prereleases = true }
-cookiecutter = "^2.2.3"
-python-slugify = "^8.0.1"
-scaraplate = "^0.5"
-toml = "^0.10"
-
-[tool.poetry.dev-dependencies]
-bump2version = "^1.0.1"
-coverage = "^7.6.1"
-green = "^4.0.0"
-mock = "^5.1.0"
-pylint = "^3.3.1"
+cookiecutter = "^2.6.0"
+python-slugify = "^8.0.4"
 pyyaml = "^6.0.2"
-testtools = "^2.6.0"
-yamllint = "^1.32.0"
+scaraplate = "^0.5"
+toml = "^0.10.2"
+
+[tool.poetry.group.dev.dependencies]
+bump2version = "^1.0.1"
+coverage = "^7.6.10"
+mock = "^5.1.0"
+ruff = "^0.9.3"
+testtools = "^2.7.2"
+yamllint = "^1.35.1"

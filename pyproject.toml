@@ -27,15 +27,12 @@ python = "^3.11"  # Compatible python versions must be declared here
 
 # Python specific dependencies with prereleases allowed
 cookiecutter = "^2.6.0"
-python-slugify = "^8.0.4"
 pyyaml = "^6.0.2"
 scaraplate = "^0.5"
 toml = "^0.10.2"
 
 [tool.poetry.group.dev.dependencies]
-bump2version = "^1.0.1"
 coverage = "^7.6.12"
-mock = "^5.1.0"
 ruff = "^0.9.7"
-testtools = "^2.7.2"
 yamllint = "^1.35.1"
+bump2version = "^1.0.1"

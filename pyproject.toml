@@ -33,6 +33,6 @@ toml = "^0.10.2"
 
 [tool.poetry.group.dev.dependencies]
 coverage = "^7.8.0"
-ruff = "^0.11.9"
+ruff = "^0.11.10"
 yamllint = "^1.37.1"
 bump2version = "^1.0.1"

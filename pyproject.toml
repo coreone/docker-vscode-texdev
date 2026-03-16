@@ -26,13 +26,13 @@ package-mode = false
 python = "^3.11"  # Compatible python versions must be declared here
 
 # Python specific dependencies with prereleases allowed
-cookiecutter = "^2.6.0"
-pyyaml = "^6.0.2"
+cookiecutter = "^2.7.1"
+pyyaml = "^6.0.3"
 scaraplate = "^0.5"
 toml = "^0.10.2"
 
 [tool.poetry.group.dev.dependencies]
-coverage = "^7.10.4"
-ruff = "^0.12.9"
-yamllint = "^1.37.1"
+coverage = "^7.13.4"
+ruff = "^0.15.5"
+yamllint = "^1.38.0"
 bump2version = "^1.0.1"
